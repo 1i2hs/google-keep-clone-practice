@@ -1,0 +1,254 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+* {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.material-icons.md-16,
+.material-icons-outlined.md-16 {
+  font-size: 16px;
+}
+
+.material-icons.md-18,
+.material-icons-outlined.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.gray,
+.material-icons-outlined.gray {
+  color: rgb(84, 84, 84);
+}
+
+.hide {
+  display: none !important;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  height: 48px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  line-height: 48px;
+  padding: 0px auto;
+  text-align: center;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+#mainBanner {
+  width: 560px;
+}
+
+#emptyNotes {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#emptyNotes > img {
+  width: 240px;
+}
+
+#emptyNotes > div {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#modalLayout {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.75;
+  background-color: #202124;
+  z-index: 4000;
+}
+
+#modalWrapper {
+  background-color: transparent;
+  padding: 16px;
+  position: fixed;
+  z-index: 4001;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+}
+
+.modal-container {
+  width: 528px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 60%), 0 4px 8px 3px rgb(0 0 0 / 30%);
+  position: relative;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.modal-container > .note-content {
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+#newNoteBar {
+  border: 1.5px solid #cbcee1;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  padding: 16px;
+  width: 560px;
+  cursor: text;
+}
+
+#newNoteBar > input {
+  outline: none;
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  border: 0px;
+  padding: 0px;
+}
+
+.modal-container .note-body-input,
+.modal-container .note-title-input {
+  display: block;
+  outline: none;
+  width: calc(100% - 32px);
+}
+
+.note button,
+.modal-container button {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0px;
+  padding: 8px 12px 4px 12px;
+}
+
+.note button:hover,
+.note div.color-select:hover,
+.modal-container button:hover,
+.modal-container div.color-select:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.note button:active,
+.modal-container button:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.note-title-input {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 16px 16px 8px 16px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: none;
+  background-color: transparent;
+}
+
+textarea.note-body-input {
+  height: 300px;
+  line-height: 22px;
+  padding: 0px 16px 16px 16px;
+  border: 0px;
+  overflow: scroll;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  resize: none;
+  background-color: transparent;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+.note-footer.flex-start {
+  justify-content: flex-start;
+}
+
+.note-footer.flex-start > *,
+.note-footer > div > * {
+  margin-right: 4px;
+}
+
+.note-footer div.color-select {
+  position: relative;
+  padding: 8px 8px 4px 12px;
+  border-radius: 4px;
+}
+
+.note-footer div.color-select > input {
+  position: absolute;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.note-footer > div {
+  display: flex;
+  align-items: center;
+}
+
+.note {
+  width: 240px;
+  margin: 8px;
+  border: 1.5px solid #cbcee1;
+  border-radius: 8px;
+}
+
+.note:hover {
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 30%);
+}
+
+.note > .note-title {
+  font-size: 16px;
+  font-weight: 550;
+  padding: 16px 16px 8px 16px;
+  word-break: break-all;
+}
+
+.note .note-body {
+  padding: 0px 16px 16px 16px;
+  word-break: break-all;
+  max-height: 240px;
+  overflow-y: hidden;
+}
+
+.note > .note-footer,
+.modal-container > .note-footer {
+  padding: 10px 8px;
+}
+
+.modal-container > .note-footer {
+  position: relative;
+  bottom: 0px;
+}
+
+.notes-section {
+  width: 1080px;
+  margin-bottom: 32px;
+}
+
+.notes-section > .section-header {
+  color: gray;
+  font-weight: bold;
+  margin: 8px 4px;
+}
+
+.note-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
