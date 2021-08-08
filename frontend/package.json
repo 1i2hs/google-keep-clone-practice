@@ -4,8 +4,7 @@
   "description": "",
   "main": "./src/app.js",
   "scripts": {
-    "start": "node ./src/app.js",
-    "dev": "nodemon --watch pages --watch public -e js,html,css ./src/app.js"
+    "start": "node ./src/app.js"
   },
   "keywords": [],
   "author": "",
