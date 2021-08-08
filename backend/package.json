@@ -1,0 +1,27 @@
+{
+  "name": "google-keep-api-server",
+  "version": "0.1.0",
+  "description": "Google Keep 클론의 REST API server를 담당하는 샘플 프로젝트입니다",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
+  },
+  "engines": {
+    "node": ">=12.17.0"
+  }
+}
