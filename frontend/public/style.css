@@ -36,7 +36,6 @@ footer {
   left: 0;
   bottom: 0;
   line-height: 48px;
-  padding: 0px auto;
   text-align: center;
   font-weight: 100;
   font-size: 14px;
@@ -55,11 +54,6 @@ footer {
 
 #emptyNotes > img {
   width: 240px;
-}
-
-#emptyNotes > div {
-  font-size: 16px;
-  font-weight: bold;
 }
 
 #modalLayout {
@@ -131,13 +125,13 @@ footer {
 }
 
 .note button:hover,
-.note div.color-select:hover,
-.modal-container button:hover,
-.modal-container div.color-select:hover {
+div.color-select:hover,
+.modal-container button:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .note button:active,
+div.color-select:active,
 .modal-container button:active {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -153,14 +147,12 @@ footer {
   background-color: transparent;
 }
 
-textarea.note-body-input {
+.note-body-input {
   height: 300px;
   line-height: 22px;
   padding: 0px 16px 16px 16px;
   border: 0px;
   overflow: scroll;
-  white-space: pre-wrap;
-  word-wrap: break-word;
   resize: none;
   background-color: transparent;
 }
@@ -169,7 +161,7 @@ textarea.note-body-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 16px;
+  padding: 10px 8px;
 }
 
 .note-footer.flex-start {
@@ -224,16 +216,6 @@ textarea.note-body-input {
   word-break: break-all;
   max-height: 240px;
   overflow-y: hidden;
-}
-
-.note > .note-footer,
-.modal-container > .note-footer {
-  padding: 10px 8px;
-}
-
-.modal-container > .note-footer {
-  position: relative;
-  bottom: 0px;
 }
 
 .notes-section {

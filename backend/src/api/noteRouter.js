@@ -30,14 +30,6 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   const { title, body, pinned, backgroundColor } = req.body;
 
-  // 제목 값이 없는 경우 예외 처리
-  if (title === undefined || title === null) {
-    res.status(400).json({
-      msg: `노트를 생성하기 위해서는 title은 필수 값입니다`,
-    });
-    return;
-  }
-
   // 새로운 노트 생성
   const note = new Note(title, body, {
     pinned: pinned !== undefined ? pinned : false,

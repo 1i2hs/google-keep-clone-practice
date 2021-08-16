@@ -7,8 +7,9 @@ class Note {
     this.body = body;
     this.pinned = option.pinned;
     this.backgroundColor = option.backgroundColor;
-    this.createdAt = Math.floor(Date.now() / 1000); // 생성된 시간
-    this.updatedAt = Math.floor(Date.now() / 1000); // 수정된 시간
+    const currentTime = Math.floor(Date.now() / 1000);
+    this.createdAt = currentTime; // 생성된 시간
+    this.updatedAt = currentTime; // 수정된 시간
   }
 }
 
