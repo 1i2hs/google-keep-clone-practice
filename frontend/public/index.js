@@ -112,8 +112,11 @@ class Modal {
       modalFooterColorSelectButton: document.querySelector(
         "#modalWrapper > div > div.note-footer div.color-select"
       ),
+      modalFooterColorSelectInput: document.querySelector(
+        "#modalWrapper > div > div.note-footer div.color-select > input"
+      ),
       modalFooterColorSelectIcon: document.querySelector(
-        "#modalWrapper > div > div.note-footer > div > button.pin > span"
+        "#modalWrapper > div > div.note-footer div.color-select > span"
       ),
       modalFooterDeleteButton: document.querySelector(
         "#modalWrapper > div > div.note-footer > div > button.delete"
@@ -143,17 +146,25 @@ class Modal {
     });
 
     this.elements.modalFooterColorSelectButton.addEventListener(
+      "click",
+      function (event) {
+        event.stopPropagation();
+        this.firstElementChild.click();
+      }
+    );
+
+    this.elements.modalFooterColorSelectInput.addEventListener(
       "input",
       function (event) {
         const color = event.target.value;
+        console.log(color);
         that.setBackgroundColor(color);
       }
     );
 
     this.elements.modalFooterDeleteButton.addEventListener(
       "click",
-      async function () {
-        await noteService.deleteNote(that.id);
+      function () {
         that.deleted = true;
         that.close();
       }
@@ -532,9 +543,6 @@ class NoteList {
     this.removeNote(noteObj.id);
   }
 }
-
-const PIN_NOTE_LIST = 0;
-const NOTE_LIST = 1;
 
 async function initialize() {
   const noteDataList = await noteService.getNotes();
